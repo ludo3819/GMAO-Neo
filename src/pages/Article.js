@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Article.css';
 import axios from 'axios';
-import QRCode from 'react-qr-code';
+import QRCode from 'qrcode.react';
 
 function Article() {
   const [articles, setArticles] = useState([]);
