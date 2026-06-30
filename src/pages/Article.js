@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Article.css';
 import axios from 'axios';
-import QRCode from 'qrcode.react';
+import QRCode from 'react-qr-code';
 
 function Article() {
   const [articles, setArticles] = useState([]);
@@ -128,7 +128,7 @@ function Article() {
           <div className="qr-content">
             <button className="btn-close" onClick={() => setSelectedQR(null)}>✕</button>
             <h3>QR Code Article</h3>
-            <QRCode value={selectedQR} size={256} level="H" />
+            <QRCode value={selectedQR} size={256} />
             <p>{selectedQR}</p>
           </div>
         </div>
