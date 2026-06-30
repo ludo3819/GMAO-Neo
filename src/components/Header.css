@@ -1,0 +1,69 @@
+.header {
+  background: linear-gradient(90deg, rgba(0, 217, 255, 0.1) 0%, rgba(196, 0, 255, 0.1) 100%);
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 217, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  animation: spin 20s linear infinite;
+}
+
+.logo h1 {
+  font-size: 24px;
+  background: linear-gradient(90deg, var(--primary-cyan) 0%, var(--primary-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-cyan);
+  font-size: 14px;
+}
+
+.status-indicator {
+  color: #00ff00;
+  font-size: 12px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

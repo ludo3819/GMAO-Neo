@@ -1,0 +1,78 @@
+.intervention {
+  animation: slideIn 0.5s ease-in;
+}
+
+.interventions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intervention-card {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, rgba(196, 0, 255, 0.05) 100%);
+  border: 2px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.intervention-card:hover {
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+  transform: translateX(5px);
+}
+
+.intervention-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.intervention-header h3 {
+  color: var(--primary-cyan);
+  font-size: 18px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.planifiée {
+  background: rgba(255, 165, 0, 0.2);
+  color: #ffa500;
+}
+
+.status.en\ cours {
+  background: rgba(0, 217, 255, 0.2);
+  color: var(--primary-cyan);
+}
+
+.status.terminée {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+}
+
+.intervention-card p {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.intervention-card .btn-danger {
+  margin-top: 15px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,75 @@
+:root {
+  --primary-cyan: #00d9ff;
+  --primary-violet: #c400ff;
+  --primary-black: #0a0e27;
+  --secondary-black: #1a1f3a;
+  --accent-cyan: #00ffff;
+  --accent-violet: #e600ff;
+  --text-light: #e0e0e0;
+  --border-color: rgba(0, 217, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 100%);
+  color: var(--text-light);
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-cyan);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-violet);
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(196, 0, 255, 0.5);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
