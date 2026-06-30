@@ -1,0 +1,32 @@
+{
+  "name": "gmao-neo",
+  "version": "1.0.0",
+  "description": "Application GMAO locale - Gestion de Maintenance Assistée par Ordinateur",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": "GMAO Neo",
+  "license": "MIT",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "electron-dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "dev": "npm run electron-dev"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.0",
+    "qrcode.react": "^1.0.1",
+    "uuid": "^9.0.0",
+    "better-sqlite3": "^9.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "react-scripts": "5.0.1",
+    "electron": "^27.0.0",
+    "concurrently": "^8.2.1",
+    "wait-on": "^7.0.1"
+  }
+}
