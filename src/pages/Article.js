@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Article.css';
 import axios from 'axios';
-import QRCode from 'qrcode.react';
 
 function Article() {
   const [articles, setArticles] = useState([]);
   const [machines, setMachines] = useState([]);
   const [showForm, setShowForm] = useState(false);
-  const [selectedQR, setSelectedQR] = useState(null);
   const [formData, setFormData] = useState({
     nom: '',
     reference: '',
@@ -123,30 +121,15 @@ function Article() {
         </form>
       )}
 
-      {selectedQR && (
-        <div className="qr-modal">
-          <div className="qr-content">
-            <button className="btn-close" onClick={() => setSelectedQR(null)}>✕</button>
-            <h3>QR Code Article</h3>
-            <QRCode value={selectedQR} size={256} />
-            <p>{selectedQR}</p>
-          </div>
-        </div>
-      )}
-
       <div className="articles-grid">
         {articles.map(article => (
           <div key={article.id} className="article-card">
-            <div className="qr-mini">
-              <QRCode value={article.qrCode} size={80} />
-            </div>
             <h3>{article.nom}</h3>
             <p><strong>Référence:</strong> {article.reference}</p>
             <p><strong>Quantité:</strong> {article.quantite}</p>
             <p><strong>Prix:</strong> {article.prix}€</p>
             <p><strong>Fournisseur:</strong> {article.fournisseur}</p>
             <div className="card-actions">
-              <button className="btn-qr" onClick={() => setSelectedQR(article.qrCode)}>Voir QR</button>
               <button className="btn-danger" onClick={() => deleteArticle(article.id)}>Supprimer</button>
             </div>
           </div>
